@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 
+router.get('/', async (req, res) => {
+  res.json('connect');
+});
+
 // Create a new user
 router.post('/add', async (req, res) => {
   try {
